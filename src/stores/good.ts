@@ -14,6 +14,7 @@ export const useGoodStore = defineStore("good", (): GoodStore => {
   const names: Ref<NamesResponse | undefined> = ref();
   const data: Ref<DataResponse | undefined> = ref();
 
+  // Сбор массива товаров из полученных с сервера данных
   const goods: ComputedRef<Good[]> = computed(() => {
     if (!data.value || !names.value) {
       return [];
@@ -39,6 +40,7 @@ export const useGoodStore = defineStore("good", (): GoodStore => {
     }
   });
 
+  // Группировка товаров
   const groupedGoods: ComputedRef<GroupedGoods[]> = computed(() => {
     return goods.value.reduce((acc: GroupedGoods[], good: Good) => {
       const element: GroupedGoods | undefined = acc.find(
