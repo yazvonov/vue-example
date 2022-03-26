@@ -1,0 +1,15 @@
+:root {
+  --default-spacing: 8px;
+
+  --default-font-size: 14px;
+  --big-font-size: 15px;
+  --default-line-height: 16px;
+
+  --color-white: #ffffff;
+  --color-green: #9fec9f;
+  --color-red: #f97e7e;
+  --color-light-gray: #f3f3f3;
+  --color-gray: #888888;
+  --color-light-blue: #d2dee2;
+  --color-orange: #fe7921;
+}
